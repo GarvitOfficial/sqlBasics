@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SQL Command Examples</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+  td {
+    word-wrap: break-word;
+    overflow: auto;
+  }
+  </style>
+</head>
+<body>
+  <header class="bg-blue-500 py-4 text-white text-center">
+    <h1 class="text-3xl">SQL Command Examples</h1>
+    <p class="text-lg">GMT</p>
+  </header>
+
+  <div class="container mx-auto mt-8">
+    <h2 class="text-2xl mb-4">Command 1: SELECT Statement</h2>
+    <pre class="bg-gray-200 p-4 rounded-lg">
+      <code class="language-sql">
+        SELECT * FROM customers;
+      </code>
+    </pre>
+
+    <h3 class="text-lg mt-4">Output:</h3>
+    <table class="border-collapse border border-gray-300 mt-2">
+      <thead>
+        <tr>
+          <th class="border border-gray-300 p-2">customer_id</th>
+          <th class="border border-gray-300 p-2">customer_name</th>
+          <th class="border border-gray-300 p-2">email</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="border border-gray-300 p-2">1</td>
+          <td class="border border-gray-300 p-2">John Smith</td>
+          <td class="border border-gray-300 p-2">john@example.com</td>
+        </tr>
+        <tr>
+          <td class="border border-gray-300 p-2">2</td>
+          <td class="border border-gray-300 p-2">Jane Doe</td>
+          <td class="border border-gray-300 p-2">jane@example.com</td>
+        </tr>
+        <tr>
+          <td class="border border-gray-300 p-2">3</td>
+          <td class="border border-gray-300 p-2">Mike Johnson</td>
+          <td class="border border-gray-300 p-2">mike@example.com</td>
+        </tr>
+        <!-- Add more rows as needed -->
+      </tbody>
+    </table>
+
+    <h2 class="text-2xl mb-4 mt-8">Command 2: UPDATE Statement</h2>
+    <pre class="bg-gray-200 p-4 rounded-lg">
+      <code class="language-sql">
+        <div>UPDATE employees SET salary = 50000 WHERE department = 'HR';</div>
+      </code>
+    </pre>
+
+    <h3 class="text-lg mt-4">Output:</h3>
+    <table class="border-collapse border border-gray-300 mt-2">
+      <thead>
+        <tr>
+          <th class="border border-gray-300 p-2">employee_id</th>
+          <th class="border border-gray-300 p-2">employee_name</th>
+          <th class="border border-gray-300 p-2">department</th>
+          <th class="border border-gray-300 p-2">salary</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="border border-gray-300 p-2">1</td>
+          <td class="border border-gray-300 p-2">John Smith</td>
+          <td class="border border-gray-300 p-2">HR</td>
+          <td class="border border-gray-300 p-2">50000</td>
+        </tr>
+        <tr>
+          <td class="border border-gray-300 p-2">2</td>
+          <td class="border border-gray-300 p-2">Jane Doe</td>
+          <td class="border border-gray-300 p-2">Sales</td>
+          <td class="border border-gray-300 p-2">30000</td>
+        </tr>
+        <tr>
+          <td class="border border-gray-300 p-2">3</td>
+          <td class="border border-gray-300 p-2">Mike Johnson</td>
+          <td class="border border-gray-300 p-2">HR</td>
+          <td class="border border-gray-300 p-2">50000</td>
+        </tr>
+        <!-- Add more rows as needed -->
+      </tbody>
+    </table>
+
+    <h2 class="text-2xl mb-4 mt-8">Command 3: INSERT Statement</h2>
+    <pre class="bg-gray-200 p-4 rounded-lg">
+      <code class="language-sql">
+        INSERT INTO orders (customer_id, product_name, quantity)
+        VALUES (1, 'Product A', 5);
+      </code>
+    </pre>
+
+    <h3 class="text-lg mt-4">Output:</h3>
+    <table class="border-collapse border border-gray-300 mt-2">
+      <thead>
+        <tr>
+          <th class="border border-gray-300 p-2">order_id</th>
+          <th class="border border-gray-300 p-2">customer_id</th>
+          <th class="border border-gray-300 p-2">product_name</th>
+          <th class="border border-gray-300 p-2">quantity</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="border border-gray-300 p-2">1</td>
+          <td class="border border-gray-300 p-2">1</td>
+          <td class="border border-gray-300 p-2">Product A</td>
+          <td class="border border-gray-300 p-2">5</td>
+        </tr>
+        <!-- Add more rows as needed -->
+      </tbody>
+    </table>
+
+    <!-- Command 4 -->
+    <h2 class="text-2xl mb-4 mt-8">Command 4: DELETE Statement</h2>
+    <pre class="bg-gray-200 p-4 rounded-lg">
+      <code class="language-sql">
+        DELETE FROM products WHERE product_id = 3;
+      </code>
+    </pre>
+
+    <h3 class="text-lg mt-4">Output:</h3>
+    <table class="border-collapse border border-gray-300 mt-2">
+      <thead>
+        <tr>
+          <th class="border border-gray-300 p-2">product_id</th>
+          <th class="border border-gray-300 p-2">product_name</th>
+          <th class="border border-gray-300 p-2">price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="border border-gray-300 p-2">1</td>
+          <td class="border border-gray-300 p-2">Product A</td>
+          <td class="border border-gray-300 p-2">10</td>
+        </tr>
+        <tr>
+          <td class="border border-gray-300 p-2">2</td>
+          <td class="border border-gray-300 p-2">Product B</td>
+          <td class="border border-gray-300 p-2">15</td>
+        </tr>
+        <!-- Product with product_id = 3 is deleted -->
+      </tbody>
+    </table>
+
+    <!-- Command 5 -->
+<h2 class="text-2xl mb-4 mt-8">Command 5: SELECT DISTINCT Statement</h2>
+<pre class="bg-gray-200 p-4 rounded-lg">
+  <code class="language-sql">
+    SELECT DISTINCT department FROM employees;
+  </code>
+</pre>
+
+<h3 class="text-lg mt-4">Output:</h3>
+<table class="border-collapse border border-gray-300 mt-2">
+  <thead>
+    <tr>
+      <th class="border border-gray-300 p-2">department</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="border border-gray-300 p-2">HR</td>
+    </tr>
+    <tr>
+      <td class="border border-gray-300 p-2">Sales</td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- Command 6 -->
+<h2 class="text-2xl mb-4 mt-8">Command 6: ORDER BY Statement</h2>
+<pre class="bg-gray-200 p-4 rounded-lg">
+  <code class="language-sql">
+    SELECT * FROM customers ORDER BY customer_name ASC;
+  </code>
+</pre>
+
+<h3 class="text-lg mt-4">Output:</h3>
+<table class="border-collapse border border-gray-300 mt-2">
+  <thead>
+    <tr>
+      <th class="border border-gray-300 p-2">customer_id</th>
+      <th class="border border-gray-300 p-2">customer_name</th>
+      <th class="border border-gray-300 p-2">email</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="border border-gray-300 p-2">2</td>
+      <td class="border border-gray-300 p-2">Jane Doe</td>
+      <td class="border border-gray-300 p-2">jane@example.com</td>
+    </tr>
+    <tr>
+      <td class="border border-gray-300 p-2">3</td>
+      <td class="border border-gray-300 p-2">Mike Johnson</td>
+      <td class="border border-gray-300 p-2">mike@example.com</td>
+    </tr>
+    <tr>
+      <td class="border border-gray-300 p-2">1</td>
+      <td class="border border-gray-300 p-2">John Smith</td>
+      <td class="border border-gray-300 p-2">john@example.com</td>
+    </tr>
+    <!-- Add more rows as needed -->
+  </tbody>
+</table>
+
+<!-- Command 7 -->
+<h2 class="text-2xl mb-4 mt-8">Command 7: COUNT Function</h2>
+<pre class="bg-gray-200 p-4 rounded-lg">
+  <code class="language-sql">
+    SELECT COUNT(*) AS total_customers FROM customers;
+  </code>
+</pre>
+
+<h3 class="text-lg mt-4">Output:</h3>
+<table class="border-collapse border border-gray-300 mt-2">
+  <thead>
+    <tr>
+      <th class="border border-gray-300 p-2">total_customers</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="border border-gray-300 p-2">3</td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- Command 8 -->
+<h2 class="text-2xl mb-4 mt-8">Command 8: INNER JOIN</h2>
+<pre class="bg-gray-200 p-4 rounded-lg">
+  <code class="language-sql">
+    SELECT orders.order_id, customers.customer_name, products.product_name
+    FROM orders
+    INNER JOIN customers ON orders.customer_id = customers.customer_id
+    INNER JOIN products ON orders.product_id = products.product_id;
+  </code>
+</pre>
+
+<h3 class="text-lg mt-4">Output:</h3>
+<table class="border-collapse border border-gray-300 mt-2">
+  <thead>
+    <tr>
+      <th class="border border-gray-300 p-2">order_id</th>
+      <th class="border border-gray-300 p-2">customer_name</th>
+      <th class="border border-gray-300 p-2">product_name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="border border-gray-300 p-2">1</td>
+      <td class="border border-gray-300 p-2">John Smith</td>
+      <td class="border border-gray-300 p-2">Product A</td>
+    </tr>
+    <!-- Add more rows as needed -->
+  </tbody>
+</table>
+
+<!-- Command 9 -->
+<h2 class="text-2xl mb-4 mt-8">Command 9: GROUP BY Statement</h2>
+<pre class="bg-gray-200 p-4 rounded-lg">
+  <code class="language-sql">
+    SELECT department, COUNT(*) AS total_employees
+    FROM employees
+    GROUP BY department;
+  </code>
+</pre>
+
+<h3 class="text-lg mt-4">Output:</h3>
+<table class="border-collapse border border-gray-300 mt-2">
+  <thead>
+    <tr>
+      <th class="border border-gray-300 p-2">department</th>
+      <th class="border border-gray-300 p-2">total_employees</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="border border-gray-300 p-2">HR</td>
+      <td class="border border-gray-300 p-2">2</td>
+    </tr>
+    <tr>
+      <td class="border border-gray-300 p-2">Sales</td>
+      <td class="border border-gray-300 p-2">1</td>
+    </tr>
+    <!-- Add more rows as needed -->
+  </tbody>
+</table>
+
+<!-- Command 10 -->
+<h2 class="text-2xl mb-4 mt-8">Command 10: LIKE Operator</h2>
+<pre class="bg-gray-200 p-4 rounded-lg">
+  <code class="language-sql">
+    SELECT * FROM products WHERE product_name LIKE '%A%';
+  </code>
+</pre>
+
+<h3 class="text-lg mt-4">Output:</h3>
+<table class="border-collapse border border-gray-300 mt-2">
+  <thead>
+    <tr>
+      <th class="border border-gray-300 p-2">product_id</th>
+      <th class="border border-gray-300 p-2">product_name</th>
+      <th class="border border-gray-300 p-2">price</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="border border-gray-300 p-2">1</td>
+      <td class="border border-gray-300 p-2">Product A</td>
+      <td class="border border-gray-300 p-2">10</td>
+    </tr>
+    <!-- Add more rows as needed -->
+  </tbody>
+</table>
+
+
+  </div>
+
+ <br>
+</body>
+</html>
